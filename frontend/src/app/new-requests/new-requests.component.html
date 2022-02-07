@@ -1,0 +1,33 @@
+<table *ngIf="requests.length > 0" class="table">
+    <tbody>
+        <th>Firstname</th>
+        <th>Surname</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Type</th>
+        <th>Agency</th>
+        <th>License</th>
+        <tr *ngFor='let r of requests'>
+            <td>{{r.firstname}}</td>
+            <td>{{r.surname}}</td>
+            <td>{{r.username}}</td>
+            <td>{{r.email}}</td>
+            <td>{{r.phone}}</td>
+            <td *ngIf="r.type==1">Guest</td>
+            <td *ngIf="r.type==2">Agency</td>
+            <td *ngIf="r.type==3">Admin</td>
+            <td>{{r.agency}}</td>
+            <td>{{r.license}}</td>
+            <td>
+                <div class="btn btn-success" (click)="accept(r)">Accept</div>
+            </td>
+            <td>
+                <div class="btn btn-danger" (click)="decline(r)">Decline</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" *ngIf="requests.length == 0">
+    <p>There is no more requests</p>
+</div>

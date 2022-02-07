@@ -1,0 +1,133 @@
+<div style="border: 2px solid gray; padding: 10px; background-color: rgb(241,
+    237, 237);">
+    <nav class="navbar navbar-default" style="height: 15px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a routerLink="/" class="navbar-brand"><b>{{estate.name}}</b></a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>{{estate.city}}</a></li>
+                    <li><a>{{estate.municipality}}</a></li>
+                    <li><a>{{estate.location}}</a></li>
+                    <li><a>{{estate.street}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-xs-6" style="min-height: 30%;max-height: 30%;">
+
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner" *ngFor="let im of estate.images;let
+                    i= index" (click)="imageClick()">
+                    <div class="carousel-item active" [ngStyle]="{'display':activeSlide[i]===true?'inline':'none'
+                        }">
+                        <img class="d-block w-100 center" src={{im}} alt="First
+                            slide" style="height:300px; width:auto; max-width:650px;">
+                    </div>
+                </div>
+            </div>
+
+            <ol class="carousel-indicators">
+                <li data-target="" data-slide-to="0" [ngClass]="activeSlide[i]?'active':''"
+                    *ngFor="let im of estate.images;let i= index"></li>
+            </ol>
+
+        </div>
+
+        <div class="col-xs-6">
+            <div class="row" style="padding: 5%;">
+
+                <div class="col-xs-3 rounded" style="border: 2px solid gray; padding: 10px;
+                    background-color: lightgray;">Type: {{estate.type}}
+                </div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-4" style="border: 2px solid gray; padding:
+                    10px;background-color: lightgray;">
+                    Area: {{estate.area}}m²</div>
+                <div class="col-xs-1">
+                </div>
+                <div class="col-xs-3" style="border: 2px solid gray; padding:
+                    10px;background-color: lightgray;">
+                    Rooms: {{estate.rooms}}
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    Advertiser: {{estate.adFirstName}} {{estate.adSurname}}
+                    <br>
+                    <span *ngIf="estate.agencyName!=null">BNumber of license:
+                        {{estate.adLicense}}</span>
+                    <br>
+                    Telephone:<i [ngStyle]="{'display':displayPhone?'none':'inline'}" style=" cursor: pointer;" class="fa fa-plus fa-lg"
+                        aria-hidden="true" (click)="phoneClick()"></i>
+                    <span [ngStyle]="{'display':displayPhone?'inline':'none'}">
+                        {{estate.adPhone}}</span>
+
+                </div>
+                <div class="col-xs-12" *ngIf="estate.agencyName!=null">
+                    Agency: {{estate.agencyName}}
+                    <br>
+                    Adresa of agency: {{estate.agencyAddress}},
+                    {{estate.agencyCity}}
+                    <br>
+                    PIB: {{estate.agencyPIB}}
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div style="float: right;">
+                <span style="color: rgb(97, 187, 97); font-size: 20px; font-weight:
+                    bold;" [ngStyle]="{'display':greenPrice?'inline':'none'}">{{numberWithCommas(estate.price)}}€</span>
+                <span style="color: red; font-size: 20px; font-weight: bold;"
+                    [ngStyle]="{'display':greenPrice?'none':'inline'}">{{numberWithCommas(estate.price)}}€</span>
+                <div style="height: 10px; border-bottom: 4px solid blue;
+                    border-left: 4px solid blue; border-right: 4px solid blue;">
+                </div>
+            </div>
+            <br><br>
+            <div style="background-color: lightgray; width: 20%; border-top: 5px
+                solid orange; border-bottom: none;">
+                Characteristics</div>
+            <div style="border: 2px solid gray; background-color: lightgray;
+                height: 100%;">
+                <mat-checkbox *ngFor="let c of initCharacteristic; let i= index;
+                    trackBy: trackByFn" class="example-margin col-xs-6" disabled [(ngModel)]="boolCharacteristics[i]">
+                    {{
+                    initCharacteristic[i] }}</mat-checkbox>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div style="float: right;">
+
+                <div class="btn btn-primary" (click)="addToFavorites()"
+                    [ngStyle]="{'display':user==null?'none':'block'}">Add to favorites</div>
+            </div>
+            <br><br>
+            <div style="background-color: lightgray; width: 20%; border-top: 5px
+                solid orange; border-bottom: none;">
+                About</div>
+            <div style="border: 2px solid gray; background-color: lightgray;">{{estate.about}}</div>
+            <br>
+            <span style="font-weight: italic; color: rgb(15, 5, 71); font-size: 20px;">Average price:
+                {{numberWithCommas(avgPrice)}}€/m2</span><br><br>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div class="row" style="padding-bottom: 10%;">
+    <div id="map" class="col-xs-12"></div>
+</div>

@@ -1,0 +1,15 @@
+<div class="alert alert-danger" *ngIf="dangerMessage">
+  <p>{{dangerMessage}}</p>
+</div>
+<div class="container">
+  <div class="col-xs-4"></div>
+  <div class="col-xs-4">
+    <label class="custom-file-upload">
+      <input type="file" (change)="onFileChanged($event)" #fileInput accept=".json"/>
+      JSON Upload
+    </label>
+    <br><br>
+    <button class="btn btn-primary" (click)="onUpload()" [disabled]="selectedFile===null">Next step!</button> <br>
+  </div>
+  <div class="col-xs-4"></div>
+</div>

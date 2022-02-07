@@ -1,0 +1,47 @@
+{
+    "Realestate": {
+        "Type": "Apartment",
+		"Name": "Stan na Tasmajdanu",
+        "City": "Belgrade",
+        "Municipality": "Palilula",
+        "Location": "Tasmajdan",
+        "Street": "",
+        "Area": 50,
+        "Rooms": 1.5,
+        "ConstructionYear": 1989,
+        "State": "Originally",
+        "Heating": "Gas",
+        "Floor": 3,
+        "TotalFloors": 6,
+        "Parking": "DA",
+        "MonthlyUtilities": 95,
+        "Price": ,
+		"lat": 44.8113,
+		"lng": 20.4567,
+        "About": "Lorem Ipsum is simply dummy text of, the, p,rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+        "Characteristics": [
+            "telephone",
+            "garden",
+            "clima",
+			"intercom"
+		],
+		"Busses": [
+			95,
+			26
+		],
+        "Advertiser": [
+            {
+                "AgencyName": "",
+                "AgencyPIB": "",
+                "AgencyCity": "",
+                "AgencyAddress": "",
+                "AgencyPhone": ""
+            },
+            {
+                "AdFirstName": "Marija",
+                "AdSurname": "Krstic",
+                "AdPhone": "+381621562662",
+                "AdLicense": ""
+            }
+        ]
+    }

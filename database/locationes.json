@@ -1,0 +1,164 @@
+[{
+  "_id": {
+    "$oid": "61d82c03c19d061e2887d094"
+  },
+  "streets": [
+    "Kombinatova",
+    "Julije Delere"
+  ],
+  "city": "Belgrade",
+  "municipality": "Palilula",
+  "location": "Kuca",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d82cbcc19d061e2887d096"
+  },
+  "streets": [
+    "Nikola Tesla",
+    "Mihajlo Pupin"
+  ],
+  "city": "Nis",
+  "municipality": "Pantelej",
+  "location": "Jocici",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61dafac27207dd2b444ec8d8"
+  },
+  "streets": [
+    "Andreja Jokica"
+  ],
+  "city": "Belgrade",
+  "municipality": "Novi Beograd",
+  "location": "Blok 19a",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61dafad77207dd2b444ec8d9"
+  },
+  "streets": [
+    "Bulevar Mihajla Pupina"
+  ],
+  "city": "Belgrade",
+  "municipality": "Novi Beograd",
+  "location": "Blok 21",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61db03c0a454e627141d7afb"
+  },
+  "streets": [
+    "Jurija Gagarina",
+    "Nehruova",
+    "Dusana Vukasovica"
+  ],
+  "city": "Belgrade",
+  "municipality": "Novi Beograd",
+  "location": "Blok45",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61db03f0a454e627141d7afc"
+  },
+  "streets": [
+    "Bulevar Nikole Tesle",
+    "Dzona Kenedija"
+  ],
+  "city": "Belgrade",
+  "municipality": "Zemun",
+  "location": "Kej",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61db0427a454e627141d7afd"
+  },
+  "streets": [
+    "Goce Delceva",
+    "Dzona Kenedija",
+    "Pariske komune",
+    "Bulevar umetnosti"
+  ],
+  "city": "Belgrade",
+  "municipality": "Novi Beograd",
+  "location": "Fontana",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e93f5d09fb4f2e442369d8"
+  },
+  "streets": [],
+  "city": "Belgrade",
+  "municipality": "Palilula",
+  "location": "Tasmajdan",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e93f6909fb4f2e442369d9"
+  },
+  "streets": [],
+  "city": "Belgrade",
+  "municipality": "Palilula",
+  "location": "Kotez",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e93f7109fb4f2e442369da"
+  },
+  "streets": [],
+  "city": "Belgrade",
+  "municipality": "Palilula",
+  "location": "Krnjaca",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e93f9509fb4f2e442369db"
+  },
+  "streets": [
+    "Milesevska",
+    "Cara Nikolaja"
+  ],
+  "city": "Belgrade",
+  "municipality": "Vracar",
+  "location": "Crveni krst",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e93fa409fb4f2e442369dc"
+  },
+  "streets": [
+    "Milesevska",
+    "Cara Nikolaja"
+  ],
+  "city": "Belgrade",
+  "municipality": "Vracar",
+  "location": "Neimar",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e93ff509fb4f2e442369dd"
+  },
+  "streets": [
+    "Gospodar Jovanova",
+    "Gospodar Jevremova",
+    "Strahinjica Bana",
+    "Dositejeva"
+  ],
+  "city": "Belgrade",
+  "municipality": "Stari Grad",
+  "location": "Gornji dorcol",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e9402309fb4f2e442369de"
+  },
+  "streets": [
+    "Jevrejska",
+    "Dunavska",
+    "Setaliste 25.maj"
+  ],
+  "city": "Belgrade",
+  "municipality": "Stari Grad",
+  "location": "Donji dorcol",
+  "__v": 0
+}]

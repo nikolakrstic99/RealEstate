@@ -1,0 +1,8 @@
+footer{
+    background-color: rgb(5, 23, 34);
+    color: lightblue; 
+    height:210px; 
+    position: relative; 
+    left: 0; 
+    width: 100vw;
+}

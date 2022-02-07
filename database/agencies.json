@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "61d728caee5da1042028a4a2"
+  },
+  "name": "CityExpert",
+  "address": "Knez Mihajlova",
+  "city": "Beograd",
+  "phone": "0113322238",
+  "pib": "0123456789",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d72940ee5da1042028a4a3"
+  },
+  "name": "4zida",
+  "address": "Obilicev Venac",
+  "city": "Beograd",
+  "phone": "987",
+  "pib": "9876543210",
+  "__v": 0
+}]

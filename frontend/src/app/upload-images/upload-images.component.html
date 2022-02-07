@@ -1,0 +1,13 @@
+<div class="container" style="text-align: center;">
+    
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">
+            <label class="image-upload-container btn btn-bwm">
+                <input class="form-control" id="fileId" type="file" placeholder="Agenct Licence" required name="file"
+                  (change)="onFileSelected($event)" accept=".jpg, .png" multiple />
+              </label>
+              <br><br>
+              <button class="btn btn-primary" (click)="add()">Add</button>
+        </div>
+        <div class="col-xs-4"></div>
+</div>

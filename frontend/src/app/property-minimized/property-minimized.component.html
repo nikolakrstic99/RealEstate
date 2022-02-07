@@ -1,0 +1,18 @@
+<div class="row">
+
+    <img class="d-block w-100 center col-xs-10" src={{getRandomImage()}} alt="First slide"
+        style="height:200px; width:auto; max-width:1000px; float: left; padding: 10px; border: 2px solid lightblue;" >
+
+
+
+    <div style="padding: 10px;" class="col-xs-2">
+
+        <a [routerLink]="['/property']" [queryParams]="{estateId:estate.id}">
+            <span style="font-weight: bold; font-size: 20px;">{{estate.name}}</span><br><br>
+        </a>
+
+        <span style="font-weight: bold; font-size: 15px; color: red;">{{numberWithCommas(estate.price)}}€</span><br><br>
+        <span style="font-weight: bold; font-size: 12px;">Busses: {{estate.busses}}</span>
+
+    </div>
+</div>

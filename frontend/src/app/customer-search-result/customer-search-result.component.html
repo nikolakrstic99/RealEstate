@@ -1,0 +1,21 @@
+<div *ngIf="estates.length > 0">
+    
+    <div *ngFor="let e of showEstate;let i = index">
+        <div class="row">
+            <div class="col-xs-12">
+                <app-property-search-result [estateId]="e.id" style="padding:30px"></app-property-search-result>
+            </div>
+        </div>
+    </div>
+
+    <mat-paginator [length]="length"
+              [pageSize]="10"
+              [pageSizeOptions]="[10]"
+              aria-label="Select page"
+              (page)="confirmPageChange($event)">
+    </mat-paginator>    
+    
+</div>
+<div class="alert alert-info" *ngIf="estates.length == 0">
+    <p>There is no properties for your filter.</p>
+</div>

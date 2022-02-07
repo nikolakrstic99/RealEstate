@@ -1,0 +1,36 @@
+<h2>Bar Chart</h2>
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+<div class="col-xs-12 col-md-6">
+    <div class="form-group">
+      <label for="city">City</label>
+      <select id="city" class="form-control" ngModel name="city" (change)="cityClick()">
+        <option *ngFor="let c of cities" [ngValue]="c.city">
+          {{ c.city }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <div class="form-group">
+      <label for="municipality">Municipality</label>
+      <select id="municipality" class="form-control" ngModel name="municipality" (change)="municipalityClick()">
+        <option *ngFor="let m of municipalities" [ngValue]="m.municipality">
+          {{ m.municipality }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <div class="form-group">
+      <label for="location">Location</label>
+      <select id="location" class="form-control" ngModel name="location" (change)="locationClick()">
+        <option *ngFor="let l of locationes" [ngValue]="l.location">
+          {{ l.location }}
+        </option>
+      </select>
+    </div>
+  </div>
+</form>
+<figure id="bar"></figure>

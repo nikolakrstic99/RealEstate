@@ -1,0 +1,194 @@
+
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" [(ngModel)]="name" name="name" required />
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="city">City</label>
+                <select id="city" class="form-control" [(ngModel)]="city" name="city" (change)="cityClick()">
+                    <option *ngFor="let c of cities" [ngValue]="c.city">
+                        {{ c.city }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="municipality">Municipality</label>
+                <select id="municipality" class="form-control" [(ngModel)]="municipality" name="municipality"
+                    (change)="municipalityClick()">
+                    <option *ngFor="let m of municipalities" [ngValue]="m.municipality">
+                        {{ m.municipality }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" class="form-control" [(ngModel)]="location" name="location"
+                    (change)="locationClick()">
+                    <option *ngFor="let l of locationes" [ngValue]="l.location">
+                        {{ l.location }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="street">Street</label>
+                <select id="street" class="form-control" [(ngModel)]="street" name="street">
+                    <option *ngFor="let s of streets" [ngValue]="s">{{ s }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="busses">Busses</label>
+                <select id="busses" class="form-control form-select" [(ngModel)]="newSelectedBusses" name="busses"
+                    multiple size="5">
+                    <option *ngFor="let b of busses; let i= index" [ngValue]="b">
+                        {{ b }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="area">Area(m²)</label>
+                <input type="text" id="area" class="form-control" [(ngModel)]="area" name="area" required />
+            </div>
+        </div>
+
+        <div class="col-xs-6"></div>
+        <div class="col-xs-6"></div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="numOfRooms">Number of rooms</label>
+                <select id="numOfRooms" class="form-control" [(ngModel)]="numOfRooms" name="numOfRooms" required>
+                    <option value="1" selected="false">1</option>
+                    <option value="1.5" selected="false">1.5</option>
+                    <option value="2" selected="false">2</option>
+                    <option value="2.5" selected="false">2.5</option>
+                    <option value="3" selected="false">3</option>
+                    <option value="3.5" selected="false">3.5</option>
+                    <option value="4" selected="false">4</option>
+                    <option value="4.5" selected="false">4.5</option>
+                    <option value="5+" selected="false">5+</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="year">Construction year</label>
+                <input type="text" id="year" class="form-control" [(ngModel)]="year" name="year" />
+            </div>
+        </div>
+
+        <div class="col-xs-6"></div>
+        <div class="col-xs-6"></div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" class="form-control" [(ngModel)]="state" name="state" />
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="heating">Heating</label>
+                <input type="text" id="heating" class="form-control" [(ngModel)]="heating" name="heating" />
+            </div>
+        </div>
+
+        <div class="col-xs-6"></div>
+        <div class="col-xs-6"></div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="floor">Floor</label>
+                <input type="texte" id="floor" class="form-control" [(ngModel)]="floor" name="floor" />
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="totalFloors">Total floors</label>
+                <input type="text" id="totalFloors" class="form-control" [(ngModel)]="totalFloors" name="totalFloors" />
+            </div>
+        </div>
+
+        <div class="col-xs-6"></div>
+        <div class="col-xs-6"></div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="parking">Parking</label>
+                <select id="type" class="form-control" [(ngModel)]="parking" name="type">
+                    <option value="NO" selected="false">NO</option>
+                    <option value="YES" selected="false">YES</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="monthly">Monthly utilities(€)</label>
+                <input type="text" id="monthly" class="form-control" [(ngModel)]="monthly" name="monthly" />
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="price">Price(€)</label>
+                <input type="text" id="price" class="form-control" [(ngModel)]="price" name="price" required />
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="about">About</label>
+                <input type="text" id="about" class="form-control" rows="5" [(ngModel)]="about" name="about" />
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label for="street">Characteristics</label>
+                <div class="row">
+
+                    <mat-checkbox *ngFor="let c of initCharacteristic;let i = index;
+                        " class="col-xs-6" [(ngModel)]="initCharacteristic[i].has"
+                        name="characteristics{{i}}">{{
+                            initCharacteristic[i].name }}</mat-checkbox>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div id="map" style="height: 500px; background-color: lightblue;"></div>
+          </div>
+
+        <div class="col-xs-12" style="padding-bottom: 20px;">
+            <button class="btn btn-primary" [disabled]="!f.valid" type="submit" style="width: 100%; height: 50px;">
+                Edit
+            </button>
+        </div>
+    </div>
+</form>

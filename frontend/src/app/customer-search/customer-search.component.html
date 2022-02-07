@@ -1,0 +1,91 @@
+
+<form #f="ngForm" (ngSubmit)="filter()">
+    <div class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select id="type" class="form-control" [(ngModel)]="type" name="type" required>
+                <option value="Apartment" selected="true">Apartment</option>
+                <option value="House" selected="false">House</option>
+                <option value="Cottage" selected="true">Cottage</option>
+                <option value="Local" selected="false">Local</option>
+                <option value="Warehouse" selected="true">Warehouse</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="price">To price</label>
+            <input type="text" id="price" class="form-control" [(ngModel)]="price" name="price">
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="meters">From square meters</label>
+            <input type="text" id="meters" class="form-control" [(ngModel)]="meters" name="meters">
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="rooms">Number of rooms</label>
+            <select id="rooms" class="form-control" [(ngModel)]="rooms" name="rooms">
+                <option value="1" selected="false">1</option>
+                <option value="1.5" selected="false">1.5</option>
+                <option value="2" selected="false">2</option>
+                <option value="2.5" selected="false">2.5</option>
+                <option value="3" selected="false">3</option>.
+                <option value="3.5" selected="false">3.5</option>
+                <option value="4" selected="false">4</option>
+                <option value="4.5" selected="false">4.5</option>
+                <option value="5+" selected="false">5+</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" class="form-control" [(ngModel)]="city" name="city" (change)="cityClick()">
+                <option *ngFor="let c of cities" [ngValue]='c.city'>{{c.city}}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12"></div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="municipality">Municipality</label>
+            <select id="municipality" class="form-control" [(ngModel)]="municipality" name="municipality" (change)="municipalityClick()">
+                <option *ngFor="let m of municipalities" [ngValue]='m.municipality'>{{m.municipality}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-xs-12"></div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="location">Location</label>
+            <select id="location" class="form-control" [(ngModel)]="location" name="location" (change)="locationClick()">
+                <option *ngFor="let l of locationes" [ngValue]='l.location'>{{l.location}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-xs-12"></div>
+
+    <div class="col-md-6 col-xs-12">
+        <input type="button" class="btn btn-primary" (click)="addLocation()" style="width: 100%; height: 50px;"
+            value="Add location">
+    </div>
+
+    <div class="col-xs-12"><br></div>
+
+    <div class="col-xs-12" style="padding-bottom: 50px;">
+        <button class="btn btn-success" type="submit" style="width: 100%; height: 50px;" >Filter</button>
+    </div>
+</form>

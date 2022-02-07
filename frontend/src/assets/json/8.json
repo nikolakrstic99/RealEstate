@@ -1,0 +1,46 @@
+{
+    "Realestate": {
+        "Type": "Apartment",
+		"Name": "Savo",
+        "City": "Belgrade",
+        "Municipality": "Novi Beograd",
+        "Location": "",
+        "Street": "",
+        "Area": 80,
+        "Rooms": 2.5,
+        "ConstructionYear": 1982,
+        "State": "Renovated",
+        "Heating": "Central heating",
+        "Floor": 2,
+        "TotalFloors": 6,
+        "Parking": "NE",
+        "MonthlyUtilities": 80,
+        "Price": 135000,
+		"lat": 44.8132,
+		"lng": 20.4252,
+        "About": "Lorem Ipsum is simply dummy text of, the, p,rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+        "Characteristics": [
+            "elevator",
+            "basement",
+			"loggia",
+			"internet"
+		],
+		"Busses": [
+			26
+		],
+        "Advertiser": [
+            {
+                "AgencyName": "",
+                "AgencyPIB": "",
+                "AgencyCity": "",
+                "AgencyAddress": "",
+                "AgencyPhone": ""
+            },
+            {
+                "AdFirstName": "Marija",
+                "AdSurname": "Krstic",
+                "AdPhone": "+381621562662",
+                "AdLicense": ""
+            }
+        ]
+    }

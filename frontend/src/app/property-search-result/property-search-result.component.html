@@ -1,0 +1,74 @@
+
+
+<div class="row" style="border: 2px solid black;">
+
+    <nav class="navbar navbar-default" style="height: 15px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a [routerLink]="['/property']" [queryParams]="{estateId:estate.id}"
+                    class="navbar-brand"><b>{{estate.name}}</b></a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>{{estate.city}}</a></li>
+                    <li><a>{{estate.municipality}}</a></li>
+                    <li><a>{{estate.location}}</a></li>
+                    <li><a>{{estate.street}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="col-xs-6">
+        <div>
+            <div style="font-weight: bold; font-size: 25px;" >{{numberWithCommas(estate.price)}}€</div><br><br>
+            <span style="font-weight: italic; color: rgb(142, 205, 226); font-size: 15px;">Avg price:
+                {{numberWithCommas(avgPrice)}}€/m2</span><br><br>
+        </div>
+        <div class="col-xs-2">
+            <label for="Area">Area</label>
+            <div class="form-control">{{estate.area}}m2</div>
+        </div>
+        <div class="col-xs-2">
+            <label for="Rooms">Rooms</label>
+            <div class="form-control">{{estate.rooms}}</div>
+        </div>
+        <div class="col-xs-2">
+            <label for="Floor">Floor</label>
+            <div class="form-control">{{estate.floor}}</div>
+        </div>
+        
+        <div class="col-xs-12 offset-xs-6" style="padding-top: 20px;">
+            <label for="About">About</label>
+            <div class="form-control" style="height: 100px;">
+                {{estate.about}}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6" style="min-height: 30%;max-height: 30%;">
+        
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner" *ngFor="let im of estate.images;let
+                i= index" (click)="imageClick()">
+                <div class="carousel-item active" [ngStyle]="{'display':activeSlide[i]===true?'inline':'none'
+                    }">
+                    <img class="d-block w-100 center" src={{im}} alt="First
+                        slide" style="height:300px; width:auto; max-width:650px;">
+                </div>
+            </div>
+        </div>
+
+        <ol class="carousel-indicators">
+            <li data-target="" data-slide-to="0" [ngClass]="activeSlide[i]?'active':''"
+                *ngFor="let im of estate.images;let i= index"></li>
+        </ol>
+        <br>
+
+    </div>
+</div>

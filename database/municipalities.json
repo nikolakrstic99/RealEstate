@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "61d7553e916bf3c942357cc9"
+  },
+  "city": "Belgrade",
+  "municipality": "Palilula"
+},{
+  "_id": {
+    "$oid": "61d755a4916bf3c942357ccc"
+  },
+  "city": "Belgrade",
+  "municipality": "Stari Grad"
+},{
+  "_id": {
+    "$oid": "61d755c5916bf3c942357cce"
+  },
+  "city": "Belgrade",
+  "municipality": "Vracar"
+},{
+  "_id": {
+    "$oid": "61d755d1916bf3c942357cd0"
+  },
+  "city": "Belgrade",
+  "municipality": "Zvezdara"
+},{
+  "_id": {
+    "$oid": "61d755e0916bf3c942357cd2"
+  },
+  "city": "Belgrade",
+  "municipality": "Novi Beograd"
+},{
+  "_id": {
+    "$oid": "61d755e8916bf3c942357cd4"
+  },
+  "city": "Belgrade",
+  "municipality": "Zemun"
+},{
+  "_id": {
+    "$oid": "61d755f4916bf3c942357cd6"
+  },
+  "city": "Belgrade",
+  "municipality": "Dorcol"
+},{
+  "_id": {
+    "$oid": "61d75624916bf3c942357cd8"
+  },
+  "city": "Novi Sad",
+  "municipality": "Futog"
+},{
+  "_id": {
+    "$oid": "61d7562e916bf3c942357cda"
+  },
+  "city": "Novi Sad",
+  "municipality": "Veternik"
+},{
+  "_id": {
+    "$oid": "61d7563c916bf3c942357cdc"
+  },
+  "city": "Novi Sad",
+  "municipality": "Kac"
+},{
+  "_id": {
+    "$oid": "61d75645916bf3c942357cde"
+  },
+  "city": "Novi Sad",
+  "municipality": "Cenej"
+},{
+  "_id": {
+    "$oid": "61d7568d916bf3c942357ce0"
+  },
+  "city": "Novi Sad",
+  "municipality": "Rumenka"
+},{
+  "_id": {
+    "$oid": "61d756a0916bf3c942357ce2"
+  },
+  "city": "Novi Sad",
+  "municipality": "Budisava"
+},{
+  "_id": {
+    "$oid": "61d756a9916bf3c942357ce4"
+  },
+  "city": "Novi Sad",
+  "municipality": "Kovilj"
+},{
+  "_id": {
+    "$oid": "61d756cd916bf3c942357ce6"
+  },
+  "city": "Nis",
+  "municipality": "Pantelej"
+},{
+  "_id": {
+    "$oid": "61d756de916bf3c942357ce8"
+  },
+  "city": "Nis",
+  "municipality": "Crveni Krst"
+},{
+  "_id": {
+    "$oid": "61d75734916bf3c942357cea"
+  },
+  "city": "Nis",
+  "municipality": "Niska Banja"
+},{
+  "_id": {
+    "$oid": "61d75741916bf3c942357cec"
+  },
+  "city": "Nis",
+  "municipality": "Palilula"
+}]

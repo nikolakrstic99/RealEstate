@@ -1,0 +1,33 @@
+<table *ngIf="users.length > 0" class="table">
+    <tbody>
+        <th>Firstname</th>
+        <th>Surname</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Type</th>
+        <th>Agency</th>
+        <th>License</th>
+        <tr *ngFor='let r of users'>
+            <td>{{r.firstname}}</td>
+            <td>{{r.surname}}</td>
+            <td>{{r.username}}</td>
+            <td>{{r.email}}</td>
+            <td>{{r.phone}}</td>
+            <td *ngIf="r.type==1">Guest</td>
+            <td *ngIf="r.type==2">Agency</td>
+            <td *ngIf="r.type==3">Admin</td>
+            <td>{{r.agency}}</td>
+            <td>{{r.license}}</td>
+            <td>
+                <div class="btn btn-success" (click)="delete(r)">Delete</div>
+            </td>
+            <td>
+                <div class="btn btn-primary" (click)="edit(r)">Edit</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" *ngIf="users.length == 0">
+    <p>There are no users</p>
+</div>

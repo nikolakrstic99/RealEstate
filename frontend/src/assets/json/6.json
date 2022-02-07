@@ -1,0 +1,42 @@
+{
+    "Realestate": {
+        "Type": "Apartment",
+		"Name": "Borjan",
+        "City": "Belgrade",
+        "Municipality": "Palilula",
+        "Location": "",
+        "Street": "",
+        "Area": 40,
+        "Rooms": 1.5,
+        "ConstructionYear": 1988,
+        "State": "Originally",
+        "Heating": "Gas",
+        "Floor": 5,
+        "TotalFloors": 6,
+        "Parking": "DA",
+        "MonthlyUtilities": 95,
+        "Price": ,
+		"lat": 44.8135,
+		"lng": 20.5421,
+        "About": "Lorem Ipsum is simply dummy text of, the, p,rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+        "Characteristics": [
+            "telephone"
+		],
+		"Busses": [
+		],
+        "Advertiser": [
+            {
+                "AgencyName": "",
+                "AgencyPIB": "",
+                "AgencyCity": "",
+                "AgencyAddress": "",
+                "AgencyPhone": ""
+            },
+            {
+                "AdFirstName": "Marija",
+                "AdSurname": "Krstic",
+                "AdPhone": "+381621562662",
+                "AdLicense": ""
+            }
+        ]
+    }

@@ -1,0 +1,48 @@
+{
+    "Realestate": {
+        "Type": "Apartment",
+		"Name": "Ubiprarip",
+        "City": "Belgrade",
+        "Municipality": "Vracar",
+        "Location": "Crveni krst",
+        "Street": "Milesevska",
+        "Area": 150,
+        "Rooms": 3,
+        "ConstructionYear": 2015,
+        "State": "LUX",
+        "Heating": "Floor heating",
+        "Floor": 2,
+        "TotalFloors": 4,
+        "Parking": "DA",
+        "MonthlyUtilities": 200,
+        "Price": 500000,
+		"lat": 44.7994,
+		"lng": 20.4807,
+        "About": "Lorem Ipsum is simply dummy text of, the, p,rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+        "Characteristics": [
+            "elevator",
+            "garage",
+            "clima",
+			"terrace",
+            "basement",
+			"loggia"
+		],
+		"Busses": [
+			26
+		],
+        "Advertiser": [
+            {
+                "AgencyName": "",
+                "AgencyPIB": "",
+                "AgencyCity": "",
+                "AgencyAddress": "",
+                "AgencyPhone": ""
+            },
+            {
+                "AdFirstName": "Marija",
+                "AdSurname": "Krstic",
+                "AdPhone": "+381621562662",
+                "AdLicense": ""
+            }
+        ]
+    }

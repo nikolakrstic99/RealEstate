@@ -1,0 +1,43 @@
+<form #f=ngForm (ngSubmit)="onSubmit()">
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" class="form-control" ngModel name="city" (change)="cityClick()" required>
+                <option *ngFor="let c of cities" [ngValue]='c.city'>{{c.city}}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label for="municipality">Municipality</label>
+            <select id="municipality" class="form-control" ngModel name="municipality" required>
+                <option *ngFor="let m of municipalities" [ngValue]='m.municipality'>{{m.municipality}}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" class="form-control" ngModel name="location" required>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label for="street">Streets</label>
+            <input type="text" *ngFor="let s of streets;let i = index; trackBy:trackByFn" [(ngModel)]='streets[i]'
+                class="form-control" [ngModelOptions]="{standalone: true}">
+            <br>
+            <input type="button" class="button btn-primary" (click)="newStreet()" value="Add street">
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <button class="btn btn-success" type="submit" style="width: 100%; height: 50px;"
+            [disabled]="!f.valid">Add</button>
+    </div>
+</form>

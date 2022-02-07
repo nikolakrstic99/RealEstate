@@ -1,0 +1,46 @@
+{
+    "Realestate": {
+        "Type": "House",
+		"Name": "Veljko",
+        "City": "Belgrade",
+        "Municipality": "Palilula",
+        "Location": "Kuca",
+        "Street": "Kombinatova",
+        "Area": 300,
+        "Rooms": 5,
+        "ConstructionYear": 1960,
+        "State": "Renovated",
+        "Heating": "Floor heating",
+        "Floor": 2,
+        "TotalFloors": 2,
+        "Parking": "DA",
+        "MonthlyUtilities": 50,
+        "Price": 160000,
+		"lat": 44.8799,
+		"lng": 20.4530,
+        "About": "Lorem Ipsum is simply dummy text of, the, p,rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+        "Characteristics": [
+            "garage",
+            "clima",
+			"terrace",
+            "basement"
+		],
+		"Busses": [
+			95
+		],
+        "Advertiser": [
+            {
+                "AgencyName": "CityExpert",
+                "AgencyPIB": "0123456789",
+                "AgencyCity": "Beograd",
+                "AgencyAddress": "Knez Mihajlova",
+                "AgencyPhone": "0113322238"
+            },
+            {
+                "AdFirstName": "Agent",
+                "AdSurname": "Prodaje",
+                "AdPhone": "+5555",
+                "AdLicense": "1"
+            }
+        ]
+    }

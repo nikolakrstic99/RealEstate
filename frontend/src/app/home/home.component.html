@@ -1,0 +1,15 @@
+<div style="padding-bottom: 10%;">
+    <div *ngIf="lastFive.length > 0">
+        <div *ngFor="let e of lastFive;let i = index">
+            
+                <div class="col-xs-12 col-md-6">
+                    <app-property-minimized [estateId]="e.id" style="padding:30px"></app-property-minimized>
+                </div>
+            
+        </div>
+
+    </div>
+    <div class="alert alert-info" *ngIf="lastFive.length == 0">
+        <p>There is no properties yet.</p>
+    </div>
+</div>

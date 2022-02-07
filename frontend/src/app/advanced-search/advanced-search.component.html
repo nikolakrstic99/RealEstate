@@ -1,0 +1,149 @@
+<form #f="ngForm" (ngSubmit)="filter()">
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label for="price">Price from</label><br>
+    <mat-slider [displayWith]="formatLabel" [max]="maxPriceFrom" [min]="minPriceFrom" [(ngModel)]="priceFrom"
+      name="priceFrom" step="1000" thumbLabel (change)="minPriceChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label for="price">Price to</label><br>
+    <mat-slider [displayWith]="formatLabel" [max]="maxPriceTo" [min]="minPriceTo" [(ngModel)]="priceTo" name="priceTo"
+      step="1000" thumbLabel (change)="maxPriceChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label for="price">Area from</label><br>
+    <mat-slider [displayWith]="formatLabel" [max]="maxAreaFrom" [min]="minAreaFrom" [(ngModel)]="areaFrom"
+      name="areaFrom" step="1" thumbLabel (change)="minAreaChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3" style="padding-bottom: 40px;">
+    <label for="price">Area to</label><br>
+    <mat-slider [displayWith]="formatLabel" [max]="maxAreaTo" [min]="minAreaTo" [(ngModel)]="areaTo" name="areaTo"
+      step="1" thumbLabel (change)="maxAreaChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label>Rooms from</label><br>
+    <mat-slider [max]="maxRoomsFrom" [min]="minRoomsFrom" [(ngModel)]="roomsFrom" name="roomsFrom" step="0.5" thumbLabel
+      (change)="minRoomsChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label>Rooms to</label><br>
+    <mat-slider [max]="maxRoomsTo" [min]="minRoomsTo" [(ngModel)]="roomsTo" name="roomsTo" step="0.5" thumbLabel
+      (change)="maxRoomsChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label>Year from</label><br>
+    <mat-slider [max]="maxYearFrom" [min]="minYearFrom" [(ngModel)]="yearFrom" name="yearFrom" step="1" thumbLabel
+      (change)="minYearChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3" style="padding-bottom: 40px;">
+    <label>Year to</label><br>
+    <mat-slider [max]="maxYearTo" [min]="minYearTo" [(ngModel)]="yearTo" name="yearTo" step="1" thumbLabel
+      (change)="maxYearChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label>Floor from</label><br>
+    <mat-slider [max]="maxFloorFrom" [min]="minFloorFrom" [(ngModel)]="floorFrom" name="floorFrom" step="1" thumbLabel
+      (change)="minFloorChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3" style="padding-bottom: 40px;">
+    <label>Floor to</label><br>
+    <mat-slider [max]="maxFloorTo" [min]="minFloorTo" [(ngModel)]="floorTo" name="floorTo" step="1" thumbLabel
+      (change)="maxFloorChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3">
+    <label>Monthly expences from</label><br>
+    <mat-slider [displayWith]="costLabel" [max]="maxCostFrom" [min]="minCostFrom" [(ngModel)]="costFrom" name="costFrom"
+      step="1" thumbLabel (change)="minCostChange()">
+    </mat-slider>
+  </div>
+
+  <div class="form-group" class="col-xs-6 col-lg-3" style="padding-bottom: 40px;">
+    <label>Monthly expences to</label><br>
+    <mat-slider [displayWith]="costLabel" [max]="maxCostTo" [min]="minCostTo" [(ngModel)]="costTo" name="costTo"
+      step="1" thumbLabel (change)="maxCostChange()">
+    </mat-slider>
+  </div>
+
+
+
+
+  <div class="col-xs-12 col-md-6 form-group">
+    <label for="Type">Advertiser</label>
+    <section class="example-section">
+      <mat-checkbox class="example-margin col-xs-6" (change)="checkType(0)">Agency</mat-checkbox>
+      <mat-checkbox class="example-margin col-xs-6" (change)="checkType(1)">Owner</mat-checkbox>
+    </section>
+  </div>
+
+  <div class="col-xs-12 col-md-6 form-group">
+    <label for="Type">State</label>
+    <section class="example-section">
+      <mat-checkbox class="example-margin col-xs-4" (change)="checkState(0)">Originally</mat-checkbox>
+      <mat-checkbox class="example-margin col-xs-4" (change)="checkState(1)">Renovated</mat-checkbox>
+      <mat-checkbox class="example-margin col-xs-4" (change)="checkState(2)">LUX</mat-checkbox>
+    </section>
+  </div>
+
+  <div class="col-xs-12 col-md-6 form-group">
+    <label for="Type">Type of heating</label>
+    <section class="example-section">
+      <div class="row">
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkHeating(0)">Central heating</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkHeating(1)">Electric heating</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkHeating(2)">Term accumulate</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkHeating(3)">Gas</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkHeating(4)">Floor heating</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkHeating(5)">Thermal pump</mat-checkbox>
+      </div>
+    </section>
+  </div>
+
+  <div class="col-xs-12 col-md-6 form-group">
+    <label for="Type">Characteristics</label>
+    <section class="example-section">
+      <div class="row">
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(0)">terrace</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(1)">basement</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(2)">internet</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(3)">loggia</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(4)">garage</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(5)">intercom</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(6)">french balcony</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(7)">garden</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(8)">telephone</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(9)">elevator</mat-checkbox>
+        <mat-checkbox class="example-margin col-xs-6" (change)="checkCharacteristics(10)">climate</mat-checkbox>
+      </div>
+    </section>
+  </div>
+
+
+
+  <div class="col-xs-12"><br /></div>
+
+  <div class="col-xs-12">
+    <button class="btn btn-success" type="submit" style="width: 100%; height: 50px">
+      Filter
+    </button>
+  </div>
+</form>

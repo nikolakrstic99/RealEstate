@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "61d75499916bf3c942357cbd"
+  },
+  "city": "Belgrade"
+},{
+  "_id": {
+    "$oid": "61d754c1916bf3c942357cbf"
+  },
+  "city": "Novi Sad"
+},{
+  "_id": {
+    "$oid": "61d754db916bf3c942357cc5"
+  },
+  "city": "Nis"
+}]
